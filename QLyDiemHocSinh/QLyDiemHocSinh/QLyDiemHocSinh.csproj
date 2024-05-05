@@ -1,0 +1,387 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{80605B3D-217F-498D-BD3A-3B1B9A3C1EB6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QLyDiemHocSinh</RootNamespace>
+    <AssemblyName>QLyDiemHocSinh</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChucNangTimKiem\XLDuLIeu\XLDiemTheoKhoi.cs" />
+    <Compile Include="ChucNangTimKiem\XLDuLIeu\XLDiemTheoLop.cs" />
+    <Compile Include="ChucNangTimKiem\XLForm\FormDiemTheoKhoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChucNangTimKiem\XLForm\FormDiemTheoKhoi.Designer.cs">
+      <DependentUpon>FormDiemTheoKhoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Crp.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Crp.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrpDiemHS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpDiemHS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrpDiemTheoKhoi.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrpDiemTheoKhoi.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataSet.cs">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FormHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHocSinh.Designer.cs">
+      <DependentUpon>FormHocSinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormInDanhSach.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInDanhSach.Designer.cs">
+      <DependentUpon>FormInDanhSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTrangChu_GiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTrangChu_GiaoVien.Designer.cs">
+      <DependentUpon>FormTrangChu_GiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KetNoi\Connect.cs" />
+    <Compile Include="FormDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDangNhap.Designer.cs">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTrangChu.Designer.cs">
+      <DependentUpon>FormTrangChu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RptDSHS.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RptDSHS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="XuLyAdmin\XuLyDuLieu\Admin_GiaoVien.cs" />
+    <Compile Include="XuLyAdmin\XuLyDuLieu\Admin_HocSinh.cs" />
+    <Compile Include="XuLyAdmin\XuLyDuLieu\Admin_LopHoc.cs" />
+    <Compile Include="XuLyAdmin\XuLyDuLieu\Admin_MonHoc.cs" />
+    <Compile Include="XuLyAdmin\XuLyForm\Admin_FormGIaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLyAdmin\XuLyForm\Admin_FormGIaoVien.Designer.cs">
+      <DependentUpon>Admin_FormGIaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuLyAdmin\XuLyForm\Admin_FormGiaoVien_Sua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLyAdmin\XuLyForm\Admin_FormGiaoVien_Sua.Designer.cs">
+      <DependentUpon>Admin_FormGiaoVien_Sua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuLyAdmin\XuLyForm\Admin_FormGiaoVien_Them.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLyAdmin\XuLyForm\Admin_FormGiaoVien_Them.Designer.cs">
+      <DependentUpon>Admin_FormGiaoVien_Them.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuLyAdmin\XuLyForm\Admin_FormGiaoVien_TimKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLyAdmin\XuLyForm\Admin_FormGiaoVien_TimKiem.Designer.cs">
+      <DependentUpon>Admin_FormGiaoVien_TimKiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuLyAdmin\XuLyForm\Admin_FormHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLyAdmin\XuLyForm\Admin_FormHocSinh.Designer.cs">
+      <DependentUpon>Admin_FormHocSinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuLyAdmin\XuLyForm\Admin_FormHocSinh_Sua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLyAdmin\XuLyForm\Admin_FormHocSinh_Sua.Designer.cs">
+      <DependentUpon>Admin_FormHocSinh_Sua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuLyAdmin\XuLyForm\Admin_FormHocSinh_TimKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLyAdmin\XuLyForm\Admin_FormHocSinh_TimKiem.Designer.cs">
+      <DependentUpon>Admin_FormHocSinh_TimKiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuLyAdmin\XuLyForm\Admin_FormLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLyAdmin\XuLyForm\Admin_FormLopHoc.Designer.cs">
+      <DependentUpon>Admin_FormLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuLyAdmin\XuLyForm\Admin_FormLopHoc_Sua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLyAdmin\XuLyForm\Admin_FormLopHoc_Sua.Designer.cs">
+      <DependentUpon>Admin_FormLopHoc_Sua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuLyAdmin\XuLyForm\Admin_FormMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLyAdmin\XuLyForm\Admin_FormMonHoc.Designer.cs">
+      <DependentUpon>Admin_FormMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuLyDuLieu\DangNhap.cs" />
+    <Compile Include="XuLyDuLieu\ThongTinTaiKhoan.cs" />
+    <Compile Include="XuLyGiaoVien\XuLyDuLieu\GV_XLDiem.cs" />
+    <Compile Include="XuLyGiaoVien\XuLyDuLieu\GV_XLHS.cs" />
+    <Compile Include="XuLyGiaoVien\XuLyDuLieu\GV_XLLop.cs" />
+    <Compile Include="XuLyGiaoVien\XuLyDuLieu\XuLyDiemMonHoc.cs" />
+    <Compile Include="XuLyGiaoVien\XuLyForm\GV_FormChamDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLyGiaoVien\XuLyForm\GV_FormChamDiem.Designer.cs">
+      <DependentUpon>GV_FormChamDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuLyGiaoVien\XuLyForm\GV_FormChamDiem_Sua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLyGiaoVien\XuLyForm\GV_FormChamDiem_Sua.Designer.cs">
+      <DependentUpon>GV_FormChamDiem_Sua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuLyGiaoVien\XuLyForm\GV_FormChamDiem_TimKiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLyGiaoVien\XuLyForm\GV_FormChamDiem_TimKiem.Designer.cs">
+      <DependentUpon>GV_FormChamDiem_TimKiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuLyGiaoVien\XuLyForm\GV_FormDiemTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLyGiaoVien\XuLyForm\GV_FormDiemTK.Designer.cs">
+      <DependentUpon>GV_FormDiemTK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuLyGiaoVien\XuLyForm\GV_FormHocSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLyGiaoVien\XuLyForm\GV_FormHocSinh.Designer.cs">
+      <DependentUpon>GV_FormHocSinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuLyGiaoVien\XuLyForm\GV_FormHocSinh_Sua.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLyGiaoVien\XuLyForm\GV_FormHocSinh_Sua.Designer.cs">
+      <DependentUpon>GV_FormHocSinh_Sua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuLyGiaoVien\XuLyForm\GV_FormLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLyGiaoVien\XuLyForm\GV_FormLopHoc.Designer.cs">
+      <DependentUpon>GV_FormLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuLySinhVien\HS_FormThongTin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLySinhVien\HS_FormThongTin.Designer.cs">
+      <DependentUpon>HS_FormThongTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XuLySinhVien\HS_FormDiem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XuLySinhVien\HS_FormDiem.Designer.cs">
+      <DependentUpon>HS_FormDiem.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ChucNangTimKiem\XLForm\FormDiemTheoKhoi.resx">
+      <DependentUpon>FormDiemTheoKhoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Crp.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Crp.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrpDiemHS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpDiemHS.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrpDiemTheoKhoi.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrpDiemTheoKhoi.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDangNhap.resx">
+      <DependentUpon>FormDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHocSinh.resx">
+      <DependentUpon>FormHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInDanhSach.resx">
+      <DependentUpon>FormInDanhSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTrangChu.resx">
+      <DependentUpon>FormTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTrangChu_GiaoVien.resx">
+      <DependentUpon>FormTrangChu_GiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RptDSHS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RptDSHS.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLyAdmin\XuLyForm\Admin_FormGIaoVien.resx">
+      <DependentUpon>Admin_FormGIaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLyAdmin\XuLyForm\Admin_FormGiaoVien_Sua.resx">
+      <DependentUpon>Admin_FormGiaoVien_Sua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLyAdmin\XuLyForm\Admin_FormGiaoVien_Them.resx">
+      <DependentUpon>Admin_FormGiaoVien_Them.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLyAdmin\XuLyForm\Admin_FormGiaoVien_TimKiem.resx">
+      <DependentUpon>Admin_FormGiaoVien_TimKiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLyAdmin\XuLyForm\Admin_FormHocSinh.resx">
+      <DependentUpon>Admin_FormHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLyAdmin\XuLyForm\Admin_FormHocSinh_Sua.resx">
+      <DependentUpon>Admin_FormHocSinh_Sua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLyAdmin\XuLyForm\Admin_FormHocSinh_TimKiem.resx">
+      <DependentUpon>Admin_FormHocSinh_TimKiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLyAdmin\XuLyForm\Admin_FormLopHoc.resx">
+      <DependentUpon>Admin_FormLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLyAdmin\XuLyForm\Admin_FormLopHoc_Sua.resx">
+      <DependentUpon>Admin_FormLopHoc_Sua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLyAdmin\XuLyForm\Admin_FormMonHoc.resx">
+      <DependentUpon>Admin_FormMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLyGiaoVien\XuLyForm\GV_FormChamDiem.resx">
+      <DependentUpon>GV_FormChamDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLyGiaoVien\XuLyForm\GV_FormChamDiem_Sua.resx">
+      <DependentUpon>GV_FormChamDiem_Sua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLyGiaoVien\XuLyForm\GV_FormChamDiem_TimKiem.resx">
+      <DependentUpon>GV_FormChamDiem_TimKiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLyGiaoVien\XuLyForm\GV_FormDiemTK.resx">
+      <DependentUpon>GV_FormDiemTK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLyGiaoVien\XuLyForm\GV_FormHocSinh.resx">
+      <DependentUpon>GV_FormHocSinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLyGiaoVien\XuLyForm\GV_FormHocSinh_Sua.resx">
+      <DependentUpon>GV_FormHocSinh_Sua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLyGiaoVien\XuLyForm\GV_FormLopHoc.resx">
+      <DependentUpon>GV_FormLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLySinhVien\HS_FormDiem.resx">
+      <DependentUpon>HS_FormDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XuLySinhVien\HS_FormThongTin.resx">
+      <DependentUpon>HS_FormThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DataSet.xsc">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet.xss">
+      <DependentUpon>DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="XuLySinhVien\XuLyDuLieu\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
